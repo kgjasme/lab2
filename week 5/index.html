@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klarenz Jasme</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://wallpaperaccess.com/full/542842.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .profile-container {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 0;
+    }
+
+    .profile-frame {
+      width: 250px;
+      height: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .content-container {
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .nav-container {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .nav-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 160px; /* Adjusted width to fit "Contact Information" */
+      background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+      z-index: 1;
+    }
+
+    .nav-link {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #85C7F2;
+    }
+
+    .main-heading {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-style: italic;
+      color: white;
+      margin-top: 10px;
+    }
+  </style>
+  <script defer>
+    // Declare variables
+    let myName = "Klarenz Jasme";
+    const studentStatus = "CS student at Asia Pacific College";
+    const skills = ["HTML", "CSS", "JavaScript", "React", "Node.js"];
+
+    // Log variables to the console
+    console.log("Name:", myName);
+    console.log("Student Status:", studentStatus);
+    console.log("Skills:", skills);
+  </script>
+</head>
+<body>
+
+<div class="nav-background"></div>
+
+<div class="nav-container">
+  <a href="skills.html" class="nav-link">Skills</a>
+  <a href="about-me.html" class="nav-link">About Me</a>
+  <a href="contact-info.html" class="nav-link">Contact Information</a>
+</div>
+
+<div class="profile-container">
+  <div class="profile-frame">
+    <img class="profile-image" src="https://i.pinimg.com/originals/4b/58/a9/4b58a95851db679e3a8eb846e1fd32af.jpg" alt="renz">
+  </div>
+
+  <p class="main-heading">Klarenz Jasme<br>A CS student at Asia Pacific College</p>
+</div>
+
+<div class="content-container">
+  <header>
+    <!-- Other content if needed -->
+  </header>
+</div>
+
+<footer>
+ 
+</footer>
+
+</body>
+</html>
