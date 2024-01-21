@@ -156,6 +156,12 @@
 
       // Add more string manipulations as needed
     });
+
+    // Example of updating navigation links
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+      link.textContent = link.textContent.toUpperCase(); // Convert to uppercase
+    });
   </script>
 </head>
 <body>
@@ -163,10 +169,10 @@
 
   <div class="nav-container">
     <div class="date-time-container" style="font-size: 14px;"></div>
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="skills.html" class="nav-link">Skills</a>
-    <a href="about-me.html" class="nav-link">About Me</a>
-    <a href="contact-info.html" class="nav-link">Contact Information</a>
+    <a href="index.html" class="nav-link">HOME</a>
+    <a href="skills.html" class="nav-link">SKILLS</a>
+    <a href="about-me.html" class="nav-link">ABOUT ME</a>
+    <a href="contact-info.html" class="nav-link">CONTACT INFORMATION</a>
   </div>
 
   <div class="profile-container">
