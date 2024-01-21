@@ -80,20 +80,42 @@
     /* Your existing styles here */
 
   </style>
-  <script defer>
-    // Declare variables
-    let myName = "Klarenz Jasme";
-    const studentStatus = "CS student at Asia Pacific College";
-    let isStudentOnline = true; // Boolean variable
-    
-    // Update main heading dynamically
-    document.addEventListener("DOMContentLoaded", function() {
+   <script defer>
+    // Example class for profile container
+    class ProfileContainer {
+      constructor(element) {
+        this.element = element;
+        this.addEventListeners();
+      }
+
+      addEventListeners() {
+        this.element.addEventListener("mouseover", this.handleMouseOver.bind(this));
+        this.element.addEventListener("mouseout", this.handleMouseOut.bind(this));
+      }
+
+      handleMouseOver() {
+        this.element.style.backgroundColor = "#e6e6e6";
+      }
+
+      handleMouseOut() {
+        this.element.style.backgroundColor = "";
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Create an instance of the class
+      const profileContainer = new ProfileContainer(document.querySelector(".profile-container"));
+
+      // Declare variables
+      let myName = "Klarenz Jasme";
+      const studentStatus = "CS student at Asia Pacific College";
+      let isStudentOnline = true; // Boolean variable
+
+      // Update main heading dynamically
       const mainHeading = document.querySelector(".main-heading");
       mainHeading.innerHTML = `${myName}<br><span>${studentStatus}</span><span class="online-icon">${isStudentOnline ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'}</span>`;
-    });
 
-    // Display ongoing date and time without time zone
-    document.addEventListener("DOMContentLoaded", function() {
+      // Display ongoing date and time without time zone
       const dateTimeContainer = document.querySelector(".date-time-container");
       function updateDateTime() {
         const currentDate = new Date();
@@ -102,27 +124,23 @@
       }
       setInterval(updateDateTime, 1000); // Update every second
       updateDateTime(); // Initial update
-    });
 
-    // Events, Precedence & Conditionals Lesson
-    document.addEventListener("DOMContentLoaded", function() {
-      const profileContainer = document.querySelector(".profile-container");
+      // Events, Precedence & Conditionals Lesson
+      const profileContainerElement = document.querySelector(".profile-container");
 
       // Example: Change profile container color on mouseover
-      profileContainer.addEventListener("mouseover", function() {
-        profileContainer.style.backgroundColor = "#e6e6e6";
+      profileContainerElement.addEventListener("mouseover", function () {
+        profileContainerElement.style.backgroundColor = "#e6e6e6";
       });
 
       // Example: Change profile container color back on mouseout
-      profileContainer.addEventListener("mouseout", function() {
-        profileContainer.style.backgroundColor = "";
+      profileContainerElement.addEventListener("mouseout", function () {
+        profileContainerElement.style.backgroundColor = "";
       });
 
       // Add more events or conditionals as needed
-    });
 
-    // Strings Lesson
-    document.addEventListener("DOMContentLoaded", function() {
+      // Strings Lesson
       const profileHeading = document.querySelector(".main-heading");
       const originalText = profileHeading.innerHTML;
 
@@ -131,29 +149,30 @@
   </script>
 </head>
 <body>
-
-<div class="nav-container">
-  <div class="date-time-container" style="font-size: 14px;"></div>
-  <a href="index.html" class="nav-link">Home</a>
-  <a href="skills.html" class="nav-link">Skills</a>
-  <a href="about-me.html" class="nav-link">About Me</a>
-  <a href="contact-info.html" class="nav-link">Contact Information</a>
-</div>
-
-<div class="profile-container">
-  <div class="profile-frame">
-    <img class="profile-image" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/418726352_2916749068464420_8044196981955880205_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeFiydt-W6vAwzVdWftYcmpDbWIHknm9DCxtYgeSeb0MLGMPZAomTIN3qY7Xz5NWwOzr7vUplef0C2sgjgBfgM3b&_nc_ohc=or1BKE13HkYAX-5ZTmM&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfCQ7taY0HUPgxsBhoboKRiF_l8GZEnqMlpalWT38QEp-g&oe=65B1CBEF" alt="renz">
-  </div>
-
-  <p class="main-heading"></p>
-
   <!-- Your existing HTML content goes here -->
 
-  <footer>
-    <!-- Your footer content goes here -->
-  </footer>
+  <div class="nav-container">
+    <div class="date-time-container" style="font-size: 14px;"></div>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="skills.html" class="nav-link">Skills</a>
+    <a href="about-me.html" class="nav-link">About Me</a>
+    <a href="contact-info.html" class="nav-link">Contact Information</a>
+  </div>
 
-</div>
+  <div class="profile-container">
+    <div class="profile-frame">
+      <img class="profile-image" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/418726352_2916749068464420_8044196981955880205_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeFiydt-W6vAwzVdWftYcmpDbWIHknm9DCxtYgeSeb0MLGMPZAomTIN3qY7Xz5NWwOzr7vUplef0C2sgjgBfgM3b&_nc_ohc=or1BKE13HkYAX-5ZTmM&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfCQ7taY0HUPgxsBhoboKRiF_l8GZEnqMlpalWT38QEp-g&oe=65B1CBEF" alt="renz">
+    </div>
+
+    <p class="main-heading"></p>
+
+    <!-- Your existing HTML content goes here -->
+
+    <footer>
+      <!-- Your footer content goes here -->
+    </footer>
+
+  </div>
 
 </body>
 </html>
