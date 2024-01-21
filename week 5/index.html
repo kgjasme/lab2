@@ -80,7 +80,7 @@
     /* Your existing styles here */
 
   </style>
-   <script defer>
+  <script defer>
     // Example class for profile container
     class ProfileContainer {
       constructor(element) {
@@ -106,14 +106,19 @@
       // Create an instance of the class
       const profileContainer = new ProfileContainer(document.querySelector(".profile-container"));
 
-      // Declare variables
-      let myName = "Klarenz Jasme";
-      const studentStatus = "CS student at Asia Pacific College";
-      let isStudentOnline = true; // Boolean variable
+      // Example of using an object
+      const profile = {
+        myName: "Klarenz Jasme",
+        studentStatus: "CS student at Asia Pacific College",
+        isStudentOnline: true,
+      };
+
+      // Accessing object properties
+      console.log(profile.myName); // Klarenz Jasme
 
       // Update main heading dynamically
       const mainHeading = document.querySelector(".main-heading");
-      mainHeading.innerHTML = `${myName}<br><span>${studentStatus}</span><span class="online-icon">${isStudentOnline ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'}</span>`;
+      mainHeading.innerHTML = `${profile.myName}<br><span>${profile.studentStatus}</span><span class="online-icon">${profile.isStudentOnline ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'}</span>`;
 
       // Display ongoing date and time without time zone
       const dateTimeContainer = document.querySelector(".date-time-container");
