@@ -116,9 +116,14 @@
       // Accessing object properties
       console.log(profile.myName); // Klarenz Jasme
 
-      // Update main heading dynamically
-      const mainHeading = document.querySelector(".main-heading");
-      mainHeading.innerHTML = `${profile.myName}<br><span>${profile.studentStatus}</span><span class="online-icon">${profile.isStudentOnline ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'}</span>`;
+      // Example function to update main heading
+      function updateMainHeading(name, status, isOnline) {
+        const mainHeading = document.querySelector(".main-heading");
+        mainHeading.innerHTML = `${name}<br><span>${status}</span><span class="online-icon">${isOnline ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'}</span>`;
+      }
+
+      // Call the function
+      updateMainHeading(profile.myName, profile.studentStatus, profile.isStudentOnline);
 
       // Display ongoing date and time without time zone
       const dateTimeContainer = document.querySelector(".date-time-container");
