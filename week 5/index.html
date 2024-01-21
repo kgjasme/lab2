@@ -93,6 +93,22 @@
       updateDateTime(); // Initial update
     });
 
+    // Events, Precedence & Conditionals Lesson
+    document.addEventListener("DOMContentLoaded", function() {
+      const profileContainer = document.querySelector(".profile-container");
+
+      // Example: Change profile container color on mouseover
+      profileContainer.addEventListener("mouseover", function() {
+        profileContainer.style.backgroundColor = "#e6e6e6";
+      });
+
+      // Example: Change profile container color back on mouseout
+      profileContainer.addEventListener("mouseout", function() {
+        profileContainer.style.backgroundColor = "";
+      });
+
+      // Add more events or conditionals as needed
+    });
   </script>
 </head>
 <body>
