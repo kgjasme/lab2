@@ -101,10 +101,30 @@
     const studentStatus = "CS student at Asia Pacific College";
     const skills = ["HTML", "CSS", "JavaScript", "React", "Node.js"];
 
+    // Additional variable for availability
+    let availableForHire = true;
+
     // Log variables to the console
     console.log("Name:", myName);
     console.log("Student Status:", studentStatus);
     console.log("Skills:", skills);
+
+    // Conditionally display a message based on availability
+    if (availableForHire) {
+      console.log("Available for hire!");
+    } else {
+      console.log("Not available for hire at the moment.");
+    }
+
+    // Update availability message dynamically
+    document.addEventListener("DOMContentLoaded", function() {
+      const availabilityMessage = document.getElementById("availability-message");
+      if (availableForHire) {
+        availabilityMessage.textContent = "Available for hire!";
+      } else {
+        availabilityMessage.textContent = "Not available for hire at the moment.";
+      }
+    });
   </script>
 </head>
 <body>
@@ -123,6 +143,12 @@
   </div>
 
   <p class="main-heading">Klarenz Jasme<br>A CS student at Asia Pacific College</p>
+
+  <!-- Display availability message -->
+  <p class="subtitle">
+    Availability: 
+    <span id="availability-message"></span>
+  </p>
 </div>
 
 <div class="content-container">
