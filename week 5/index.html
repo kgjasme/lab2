@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Klarenz Jasme</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -65,6 +66,15 @@
     .main-heading {
       color: white;
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .online-icon {
+      margin-top: 5px;
+      color: green;
     }
 
     /* Your existing styles here */
@@ -74,11 +84,12 @@
     // Declare variables
     let myName = "Klarenz Jasme";
     const studentStatus = "CS student at Asia Pacific College";
+    let isStudentOnline = true; // Boolean variable
     
     // Update main heading dynamically
     document.addEventListener("DOMContentLoaded", function() {
       const mainHeading = document.querySelector(".main-heading");
-      mainHeading.innerHTML = `${myName}<br>${studentStatus}`;
+      mainHeading.innerHTML = `${myName}<br><span>${studentStatus}</span><span class="online-icon">${isStudentOnline ? '<i class="fas fa-check"></i>' : '<i class="fas fa-times"></i>'}</span>`;
     });
 
     // Display ongoing date and time without time zone
@@ -114,7 +125,6 @@
     document.addEventListener("DOMContentLoaded", function() {
       const profileHeading = document.querySelector(".main-heading");
       const originalText = profileHeading.innerHTML;
-
 
       // Add more string manipulations as needed
     });
