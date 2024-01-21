@@ -94,6 +94,21 @@
       color: white;
       margin-top: 10px;
     }
+
+    /* Button style */
+    .change-heading-button {
+      background-color: #85C7F2;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .change-heading-button:hover {
+      background-color: #5E99C6;
+    }
   </style>
   <script defer>
     // Declare variables
@@ -125,6 +140,12 @@
         availabilityMessage.textContent = "Not available for hire at the moment.";
       }
     });
+
+    // Function to change the main heading text
+    function changeMainHeading() {
+      const mainHeading = document.querySelector(".main-heading");
+      mainHeading.textContent = "New Heading Text!";
+    }
   </script>
 </head>
 <body>
@@ -149,6 +170,9 @@
     Availability: 
     <span id="availability-message"></span>
   </p>
+
+  <!-- Button to change heading -->
+  <button class="change-heading-button" onclick="changeMainHeading()">Change Heading</button>
 </div>
 
 <div class="content-container">
@@ -159,7 +183,4 @@
 
 <footer>
  
-</footer>
-
-</body>
-</html>
+</foot
