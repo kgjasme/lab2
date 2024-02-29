@@ -77,71 +77,71 @@
       color: green;
     }
 
-    /* Your existing styles here */
+    /* CSS styles here */
 
   </style>
   <script defer>
+    // JavaScript code here
     // Example class for profile container
-class ProfileContainer {
-  constructor(element) {
-    this.element = element;
-  }
-}
+    class ProfileContainer {
+      constructor(element) {
+        this.element = element;
+      }
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Create an instance of the class
-  const profileContainer = new ProfileContainer(document.querySelector(".profile-container"));
+    document.addEventListener("DOMContentLoaded", function () {
+      // Create an instance of the class
+      const profileContainer = new ProfileContainer(document.querySelector(".profile-container"));
 
-  // Example of using an object
-  const profile = {
-    myName: "Klarenz Jasme",
-    studentStatus: "CS student at Asia Pacific College"
-  };
+      // Example of using an object
+      const profile = {
+        myName: "Klarenz Jasme",
+        studentStatus: "CS student at Asia Pacific College"
+      };
 
-  // Accessing object properties
-  console.log(profile.myName); // Klarenz Jasme
+      // Accessing object properties
+      console.log(profile.myName); // Klarenz Jasme
 
-  // Example function to update main heading
-  function updateMainHeading(name, status) {
-    const mainHeading = document.querySelector(".main-heading");
-    mainHeading.innerHTML = `${name}<br><span>${status}</span>`;
-  }
+      // Example function to update main heading
+      function updateMainHeading(name, status) {
+        const mainHeading = document.querySelector(".main-heading");
+        mainHeading.innerHTML = `${name}<br><span>${status}</span>`;
+      }
 
-  // Call the function
-  updateMainHeading(profile.myName, profile.studentStatus);
+      // Call the function
+      updateMainHeading("<?php echo $name; ?>", "<?php echo $jobTitle; ?>");
 
-  // Display ongoing date and time without time zone
-  const dateTimeContainer = document.querySelector(".date-time-container");
-  function updateDateTime() {
-    const currentDate = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
-    dateTimeContainer.textContent = currentDate.toLocaleDateString('en-US', options);
-  }
-  setInterval(updateDateTime, 1000); // Update every second
-  updateDateTime(); // Initial update
-});
-
-      // Events, Precedence & Conditionals Lesson
-      const profileContainerElement = document.querySelector(".profile-container");
-
-      // Example: Change profile container color on mouseover
-      profileContainerElement.addEventListener("mouseover", function () {
-        profileContainerElement.style.backgroundColor = "#e6e6e6";
-      });
-
-      // Example: Change profile container color back on mouseout
-      profileContainerElement.addEventListener("mouseout", function () {
-        profileContainerElement.style.backgroundColor = "";
-      });
-
-      // Add more events or conditionals as needed
-
-      // Strings Lesson
-      const profileHeading = document.querySelector(".main-heading");
-      const originalText = profileHeading.innerHTML;
-
-      // Add more string manipulations as needed
+      // Display ongoing date and time without time zone
+      const dateTimeContainer = document.querySelector(".date-time-container");
+      function updateDateTime() {
+        const currentDate = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+        dateTimeContainer.textContent = currentDate.toLocaleDateString('en-US', options);
+      }
+      setInterval(updateDateTime, 1000); // Update every second
+      updateDateTime(); // Initial update
     });
+
+    // Events, Precedence & Conditionals Lesson
+    const profileContainerElement = document.querySelector(".profile-container");
+
+    // Example: Change profile container color on mouseover
+    profileContainerElement.addEventListener("mouseover", function () {
+      profileContainerElement.style.backgroundColor = "#e6e6e6";
+    });
+
+    // Example: Change profile container color back on mouseout
+    profileContainerElement.addEventListener("mouseout", function () {
+      profileContainerElement.style.backgroundColor = "";
+    });
+
+    // Add more events or conditionals as needed
+
+    // Strings Lesson
+    const profileHeading = document.querySelector(".main-heading");
+    const originalText = profileHeading.innerHTML;
+
+    // Add more string manipulations as needed
 
     // Example of updating navigation links
     const navLinks = document.querySelectorAll(".nav-link");
@@ -156,27 +156,42 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
 </head>
 <body>
-  <!-- Your existing HTML content goes here -->
+<!--HTML content goes here -->
+<div class="nav-container">
+  <div class="date-time-container" style="font-size: 14px;"></div>
+  <?php
+  // Define an array of links
+  $links = array(
+    "index.html" => "HOME",
+    "skills.html" => "SKILLS",
+    "about-me.html" => "ABOUT ME",
+    "contact-info.html" => "CONTACT INFORMATION"
+  );
 
-  <div class="nav-container">
-    <div class="date-time-container" style="font-size: 14px;"></div>
-    <a href="index.html" class="nav-link">HOME</a>
-    <a href="skills.html" class="nav-link">SKILLS</a>
-    <a href="about-me.html" class="nav-link">ABOUT ME</a>
-    <a href="contact-info.html" class="nav-link">CONTACT INFORMATION</a>
+  // Output the links dynamically using a loop
+  foreach ($links as $url => $text) {
+    echo "<a href=\"$url\" class=\"nav-link\">" . strtoupper($text) . "</a>";
+  }
+  ?>
+</div>
+
+<div class="profile-container">
+  <div class="profile-frame">
+    <img class="profile-image" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/418726352_2916749068464420_8044196981955880205_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=UtjTl6WXIXQAX_T3-33&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfByzU3vzDhK4ywFZlZDrHGLib07JBmNyXGey1C-qH5r1w&oe=65E5366F">
   </div>
 
-  <div class="profile-container">
-    <div class="profile-frame">
-      <img class="profile-image" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/418726352_2916749068464420_8044196981955880205_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=UtjTl6WXIXQAX_T3-33&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfByzU3vzDhK4ywFZlZDrHGLib07JBmNyXGey1C-qH5r1w&oe=65E5366F" alt="renz">
-    </div>
+  <p class="main-heading">
+    <?php
+    // Output the main heading dynamically using variables
+    echo $name . "<br><span>" . $jobTitle . "</span>";
+    ?>
+  </p>
 
-    <p class="main-heading"></p>
-    <footer>
+  <footer>
+    <!-- Your footer content goes here -->
+  </footer>
 
-    </footer>
-
-  </div>
+</div>
 
 </body>
 </html>
