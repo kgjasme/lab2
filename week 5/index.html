@@ -177,14 +177,19 @@
  
   <?php
   function getGreeting() {
-      date_default_timezone_set('Asia/Manila'); 
+      date_default_timezone_set('Asia/Manila');
       $hour = date('H');
+      $greetings = array(
+          "Good morning!",
+          "Good afternoon!",
+          "Good evening!"
+      );
       if ($hour < 12) {
-          return "Good morning!";
+          return $greetings[0]; // Morning
       } elseif ($hour < 18) {
-          return "Good afternoon!";
+          return $greetings[1]; // Afternoon
       } else {
-          return "Good evening!";
+          return $greetings[2]; // Evening
       }
   }
   ?>
