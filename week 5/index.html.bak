@@ -151,7 +151,7 @@
 
     // Example of using Browser BOM to display an alert
     window.onload = function() {
-      alert("Welcome!");
+      alert("Welcome to my Personal Website!");
     };
   </script>
 </head>
@@ -159,20 +159,10 @@
 <!--HTML content goes here -->
 <div class="nav-container">
   <div class="date-time-container" style="font-size: 14px;"></div>
-  <?php
-  // Define an array of links
-  $links = array(
-    "index.html" => "HOME",
-    "skills.html" => "SKILLS",
-    "about-me.html" => "ABOUT ME",
-    "contact-info.html" => "CONTACT INFORMATION"
-  );
-
-  // Output the links dynamically using a loop
-  foreach ($links as $url => $text) {
-    echo "<a href=\"$url\" class=\"nav-link\">" . strtoupper($text) . "</a>";
-  }
-  ?>
+  <a href="index.html" class="nav-link">HOME</a>
+  <a href="skills.html" class="nav-link">SKILLS</a>
+  <a href="about-me.html" class="nav-link">ABOUT ME</a>
+  <a href="contact-info.html" class="nav-link">CONTACT INFORMATION</a>
 </div>
 
 <div class="profile-container">
@@ -181,14 +171,14 @@
   </div>
 
   <p class="main-heading">
-    <?php
-    // Output the main heading dynamically using variables
-    echo $name . "<br><span>" . $jobTitle . "</span>";
-    ?>
+    <?php echo date("Y-m-d"); ?>
   </p>
 
+  <!-- Displaying a PHP string variable -->
+  <p><?php $city = "New York"; echo "City: $city"; ?></p>
+
   <footer>
-    <!-- Your footer content goes here -->
+
   </footer>
 
 </div>
