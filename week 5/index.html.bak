@@ -173,9 +173,7 @@
   <p class="main-heading">
     <?php echo date("Y-m-d"); ?>
   </p>
-
-  <!-- Displaying a PHP string variable -->
-  <p><?php $city = "New York"; echo "City: $city"; ?></p>
+  <p><?php $city = "Makati"; echo "City: $city"; ?></p>
 
   <footer>
 
