@@ -173,8 +173,8 @@
   <p class="main-heading">
     <?php echo date("Y-m-d"); ?>
   </p>
- <p style="color: white;"><?php $city = "Makati"; echo "City: $city"; ?></p>
- 
+ <p style="color: white;"><?php echo "City: Makati "; ?></p>
+ <p style="color: white;"><?php echo getGreeting(); ?></p>
   <?php
   function getGreeting() {
       date_default_timezone_set('Asia/Manila');
@@ -193,7 +193,7 @@
       }
   }
   ?>
-  <<p style="color: white;"><?php echo getGreeting(); ?></p>
+ 
 
 
   <footer>
