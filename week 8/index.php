@@ -173,7 +173,7 @@
   <p class="main-heading">
     <?php echo date("Y-m-d"); ?>
   </p>
-  <p><?php $city = "Makati"; echo "City: $city"; ?></p>
+ <p style="color: white;"><?php $city = "Makati"; echo "City: $city"; ?></p>
  
   <?php
   function getGreeting() {
