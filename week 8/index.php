@@ -193,7 +193,8 @@
       }
   }
   ?>
-  <p><?php echo getGreeting(); ?></p>
+  <<p style="color: white;"><?php echo getGreeting(); ?></p>
+
 
   <footer>
 
