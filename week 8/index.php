@@ -9,18 +9,19 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url('https://wallpaperaccess.com/full/542842.jpg') center/cover no-repeat;
+      background: url('https://www.chromethemer.com/wallpapers/chromebook-wallpapers/images/960/jdm-chromebook-wallpaper.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      position: relative; /* Set position relative for the body */
     }
 
     .profile-container {
       position: absolute;
       top: 20%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 0; /* Set the left edge of the container to the left edge of the viewport */
+      transform: translateY(-50%); /* Center vertically */
       text-align: center;
       z-index: 0;
     }
@@ -31,6 +32,7 @@
       border-radius: 20px;
       overflow: hidden;
       margin-bottom: 10px;
+      margin-left: 20px; /* Add margin to the left side */
     }
 
     .profile-image {
@@ -42,24 +44,25 @@
 
     .nav-container {
       position: fixed;
-      top: 0;
-      right: 0;
-      padding: 20px;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+    }
+
+    .icon-container {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      z-index: 2;
-      color: white;
     }
 
-    .nav-link {
-      cursor: pointer;
-      text-decoration: none;
+    .nav-icon {
+      font-size: 24px;
       margin-bottom: 10px;
-      transition: color 0.3s ease;
+      color: white;
+      cursor: pointer;
     }
 
-    .nav-link:hover {
+    .nav-icon:hover {
       color: #85C7F2;
     }
 
@@ -77,9 +80,16 @@
       color: green;
     }
 
-    /* CSS styles here */
-
+    .date-time-container {
+      position: absolute;
+      bottom: 20px; /* Adjust bottom position as needed */
+      right: 20px; /* Adjust right position as needed */
+      color: white;
+      font-size: 14px;
+      z-index: 1; /* Ensure the date-time container is above other content */
+    }
   </style>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
   <script defer>
     // JavaScript code here
     // Example class for profile container
@@ -135,8 +145,6 @@
       profileContainerElement.style.backgroundColor = "";
     });
 
-    // Add more events or conditionals as needed
-
     // Strings Lesson
     const profileHeading = document.querySelector(".main-heading");
     const originalText = profileHeading.innerHTML;
@@ -158,48 +166,38 @@
 <body>
 <!--HTML content goes here -->
 <div class="nav-container">
-  <div class="date-time-container" style="font-size: 14px;"></div>
-  <a href="index.html" class="nav-link">HOME</a>
-  <a href="skills.html" class="nav-link">SKILLS</a>
-  <a href="about-me.html" class="nav-link">ABOUT ME</a>
-  <a href="contact-info.html" class="nav-link">CONTACT INFORMATION</a>
+  <div class="icon-container">
+    <i class="fas fa-gamepad nav-icon" title="Games"></i>
+    <i class="fas fa-film nav-icon" title="Movies"></i>
+    <i class="fas fa-music nav-icon" title="Music"></i>
+  </div>
 </div>
 
 <div class="profile-container">
   <div class="profile-frame">
     <img class="profile-image" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/418726352_2916749068464420_8044196981955880205_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=UtjTl6WXIXQAX_T3-33&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfByzU3vzDhK4ywFZlZDrHGLib07JBmNyXGey1C-qH5r1w&oe=65E5366F">
   </div>
+</div>
 
-  <p class="main-heading">
-    <?php echo date("Y-m-d"); ?>
-  </p>
- <p style="color: white;"><?php echo "City: Makati "; ?></p>
- <p style="color: white;"><?php echo getGreeting(); ?></p>
+<div class="date-time-container">
   <?php
-  function getGreeting() {
-      date_default_timezone_set('Asia/Manila');
-      $hour = date('H');
-      $greetings = array(
-          "Good morning!",
-          "Good afternoon!",
-          "Good evening!"
-      );
-      if ($hour < 12) {
-          return $greetings[0]; // Morning
-      } elseif ($hour < 18) {
-          return $greetings[1]; // Afternoon
-      } else {
-          return $greetings[2]; // Evening
-      }
-  }
+    date_default_timezone_set('Asia/Manila');
+    $hour = date('H');
+    $greetings = array(
+        "Good morning!",
+        "Good afternoon!",
+        "Good evening!"
+    );
+    if ($hour < 12) {
+        echo $greetings[0]; // Morning
+    } elseif ($hour < 18) {
+        echo $greetings[1]; // Afternoon
+    } else {
+        echo $greetings[2]; // Evening
+    }
   ?>
- 
-
-
-  <footer>
-
-  </footer>
-
+  <br>
+  <?php echo date("Y-m-d"); ?>
 </div>
 
 </body>
