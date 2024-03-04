@@ -23,43 +23,43 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            position: relative; /* Set position relative for the body */
-            background-size: cover; /* Adjust background size */
+            position: relative; 
+            background-size: cover;
         }
 
         .profile-container {
             position: absolute;
-            top: 20px; /* Adjust top position as needed */
-            left: 20px; /* Adjust left position as needed */
+            top: 20px; 
+            left: 20px;
             z-index: 1;
-            display: flex; /* Add this to make the children flex items */
-            align-items: center; /* Align items vertically */
+            display: flex; 
+            align-items: center;
         }
 
         .profile-frame {
-            width: 240px; /* Adjust width as needed */
-            height: 290px; /* Adjust height as needed */
-            border-radius: 20px; /* Round rectangle */
+            width: 240px; 
+            height: 290px; 
+            border-radius: 20px; 
             overflow: hidden;
-            margin-right: 20px; /* Add margin to separate from the main heading */
+            margin-right: 20px; 
         }
 
         .profile-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 20px; /* Adjust border radius */
+            border-radius: 20px; 
         }
 
         .main-heading {
             color: white;
-            text-align: left; /* Align text to the left */
-            margin: 0 0 0 10px; /* Adjust margin as needed */
+            text-align: left; 
+            margin: 0 0 0 10px; 
             z-index: 1;
-            position: absolute; /* Position it absolutely */
-            top: 20px; /* Adjust top position */
-            left: calc(250px + 20px); /* Adjust left position based on profile frame width and margin */
-            white-space: nowrap; /* Prevent line breaks */
+            position: absolute;
+            top: 20px;
+            left: calc(250px + 20px); 
+            white-space: nowrap;
         }
 
         .main-heading h1 {
@@ -99,27 +99,27 @@
 
         .games-list {
             position: fixed;
-            top: 50%; /* Center the games vertically */
-            left: 50%; /* Center the games horizontally */
-            transform: translate(-50%, -50%); /* Move the games to center */
-            display: none; /* Initially hide the games list */
-            flex-direction: row; /* Arrange items horizontally */
-            align-items: center; /* Center items vertically */
-            justify-content: center; /* Center items horizontally */
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            display: none; 
+            flex-direction: row; 
+            align-items: center;
+            justify-content: center; 
             animation: fade-in 0.5s ease-out;
-            width: auto; /* Set width to auto */
-            max-width: 80%; /* Limit maximum width */
-            z-index: 3; /* Ensure the games list is above other content */
-            color: white; /* Change font color to white */
+            width: auto; 
+            max-width: 80%;
+            z-index: 3; 
+            color: white; 
         }
 
         .games-list.visible {
-            display: flex; /* Show the games list when it has the 'visible' class */
+            display: flex; 
         }
 
         .games-list li {
             list-style: none;
-            text-align: center; /* Center text */
+            text-align: center; 
         }
 
         .games-list img {
@@ -173,8 +173,8 @@
         }
 
         .intro-container {
-            margin-left: 50px; /* Adjusted to move the text slightly to the left */
-            padding-top: 20px; /* Added padding to separate the text from the sidebar */
+            margin-left: 50px;
+            padding-top: 20px; 
         }
     </style>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
