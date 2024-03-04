@@ -37,8 +37,8 @@
         }
 
         .profile-frame {
-            width: 250px; /* Adjust width as needed */
-            height: 320px; /* Adjust height as needed */
+            width: 240px; /* Adjust width as needed */
+            height: 290px; /* Adjust height as needed */
             border-radius: 20px; /* Round rectangle */
             overflow: hidden;
             margin-right: 20px; /* Add margin to separate from the main heading */
