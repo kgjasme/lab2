@@ -37,7 +37,7 @@
         }
 
         .profile-frame {
-            width: 240px; 
+            width: 10px; 
             height: 290px; 
             border-radius: 20px; 
             overflow: hidden;
