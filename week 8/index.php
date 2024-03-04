@@ -187,16 +187,6 @@
                 gamesList.classList.toggle("visible"); // Toggle the 'visible' class to show/hide the games list
             });
 
-            const profileContainerElement = document.querySelector(".profile-container");
-
-            profileContainerElement.addEventListener("mouseover", function () {
-                profileContainerElement.style.backgroundColor = "#e6e6e6";
-            });
-
-            profileContainerElement.addEventListener("mouseout", function () {
-                profileContainerElement.style.backgroundColor = "";
-            });
-
             const profileImage = document.querySelector(".profile-image");
 
             profileImage.addEventListener("mouseover", function () {
