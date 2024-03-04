@@ -149,7 +149,7 @@
 			color: white;
 			font-size: 14px;
 			z-index: 1;
-			font-family: 'Source Sans Pro', sans-serif; 
+			font-family: 'Raleway', sans-serif; 
 		}
 
         .social-links {
