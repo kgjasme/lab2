@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klarenz Jasme</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
     <style>
         body {
             margin: 0;
@@ -61,11 +63,13 @@
         }
 
         .main-heading h1 {
-            margin: 0;
+			margin: 0;
+			font-family: 'Raleway', sans-serif;
         }
 
         .main-heading p {
-            margin: 5px 0 0; /* Adjust margin */
+            margin: 5px 0 0;
+			 font-family: 'Source Sans Pro', sans-serif;
         }
 
         .nav-container {
@@ -139,13 +143,14 @@
         }
 
         .date-time-container {
-            position: fixed;
-            bottom: 20px; /* Adjust bottom position as needed */
-            right: 20px; /* Adjust right position as needed */
-            color: white;
-            font-size: 14px;
-            z-index: 1; /* Ensure the date-time container is above other content */
-        }
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			color: white;
+			font-size: 14px;
+			z-index: 1;
+			font-family: 'Source Sans Pro', sans-serif; 
+		}
 
         .social-links {
             position: fixed;
@@ -212,7 +217,7 @@
             const dateTimeContainer = document.querySelector(".date-time-container");
             function updateDateTime() {
                 const currentDate = new Date();
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
                 dateTimeContainer.textContent = currentDate.toLocaleDateString('en-US', options);
             }
             setInterval(updateDateTime, 1000);
